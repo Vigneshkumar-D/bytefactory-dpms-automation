@@ -1,0 +1,141 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Tests">
+    <listeners>
+        <listener class-name="org.example.CustomListeners"/>
+    </listeners>
+    <test name="Main">
+        <classes>
+            <class name="org.example.Main">
+                <methods>
+                    <include name="setUp"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Login Test">
+        <classes>
+            <class name="org.example.LoginTest">
+                <methods>
+                    <include name="testSuccessfulLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Configuration Test">
+        <classes>
+            <class name="org.example.ConfigurationTest">
+                <methods>
+                    <include name="testRoleCreation"/>
+                    <include name="testSuperUserCreation"/>
+                    <include name="testSuperUserAccess" />
+                    <include name="testLogout"/>
+                    <include name="testSuccessfulLogin" />
+                    <include name="testManagerRoleCreation" />
+                    <include name="testTechnicianRoleCreation" />
+                    <include name="testManagerAndTechUserCreation" />
+                    <include name="testUserGroupCreation"/>
+                    <include name="testManagerUserAccess"/>
+                    <include name="testTechnicianUserAccess" />
+                    <include name="testSuperUserLogout" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Scheduler Test">
+            <classes>
+                <class name="org.example.SchedulerTest">
+                    <methods>
+                        <include name="testManagerLogin" />
+                        <include name="testSchedulerCreation" />
+                        <include name="testCheckListExecutionStatusScheduled" />
+                    </methods>
+                </class>
+            </classes>
+    </test>
+    <test name="ChecklistExecution Test">
+        <classes>
+            <class name="org.example.ChecklistExecutionTest">
+                <methods>
+                    <include name="testChecklistExecution"/>
+                    <include name="testLogout" />
+                    <include name="testSuccessfulLogin" />
+                    <include name="testSchedulerExecutionInProgress" />
+                    <include name="testCheckListExecutionStatusInProgress" />
+                    <include name="testSchedulerExecutionClosed" />
+                    <include name="testCheckListExecutionStatusClosed" />
+                    <include name="testOverallTicketCount" />
+                    <include name="testTechnicianLogout" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Resolution Work Order Test">
+        <classes>
+            <class name="org.example.ResolutionWorkOrderTest">
+                <methods>
+                    <include name="testManagerLogin" />
+<!--                    <include name="testDashBoardOpenedStatus" />-->
+                    <include name="testReportOpenedStatus" />
+                    <include name="testResolutionWorkOrder" />
+<!--                    <include name="testDashBoardAssignedStatus" />-->
+                    <include name="testReportAssignedStatus" />
+                    <include name="testLogout" />
+                    <include name="testSuccessfulLogin" />
+                    <include name="testRWOExecution" />
+<!--                    <include name="testDashBoardResolvedStatus" />-->
+                    <include name="testReportResolvedStatus" />
+                    <include name="testLogoutAssignedToUser" />
+                    <include name="testAssignedByLogin" />
+                    <include name="testApproval" />
+                    <include name="testReportApprovedStatus" />
+                    <include name="testTicketStatus" />
+<!--                    <include name="testDashBoardCompletedStatus" />-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!--    <test name="DashBoard Test">-->
+<!--        <classes>-->
+<!--            <class name="org.example.DashBoardTest">-->
+<!--                <methods>-->
+<!--                    <include name="testOverallTicketCount"/>-->
+<!--                    <include name="testCheckListExecutionStatusScheduled" />-->
+<!--                    <include name="testCheckListExecutionStatusInProgress" />-->
+<!--                    <include name="testCheckListExecutionStatusClosed"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Super User Access Test">-->
+<!--        <classes>-->
+<!--            <class name="org.example.SuperUserAccessTest">-->
+<!--                <methods>-->
+<!--                    <include name="testAdminLogout" />-->
+<!--                    <include name="testSuccessfulLogin" />-->
+<!--                    <include name="testSuperUserAccess" />-->
+<!--                    <include name="testLogout" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Technician Access Test">-->
+<!--        <classes>-->
+<!--            <class name="org.example.TechnicianAccessTest">-->
+<!--                <methods>-->
+<!--                    <include name="testSuccessfulLogin" />-->
+<!--                    <include name="testTechnicianAccess" />-->
+<!--                    <include name="testLogout" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Report Test">-->
+<!--        <classes>-->
+<!--            <class name="org.example.ReportTest">-->
+<!--                <methods>-->
+<!--                    <include name="testReports"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
